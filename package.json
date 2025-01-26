@@ -1,0 +1,26 @@
+{
+  "name": "progressive-fp-ts-belt",
+  "version": "1.0.0",
+  "description": "A progressive approach to the functional programming using ts-belt.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  },
+  "dependencies": {
+    "@mobily/ts-belt": "^3.13.1",
+    "cli-highlight": "^2.1.11"
+  }
+}
