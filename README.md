@@ -60,7 +60,7 @@ Explore recursion, a foundational programming concept where a function solves co
 ### 7. Recursion: Sum of an Array
 See recursion applied in a practical example: summing elements in an array. The example leverages TS Belt methods like `A.head` and `A.drop` to implement functional recursion elegantly.
 
-### 8. Functional Error Handling
+### 8. and 9. Functional Error Handling
 This section explores how to handle errors functionally using `Option` and `Result` from TS Belt. It includes three parts:
 
 - **Basic Error Handling**: Demonstrates how to represent success and failure using `Result`. For instance, dividing numbers safely by checking for division by zero.
@@ -77,7 +77,7 @@ The repository tracks your progress by saving the last completed section in a fi
 
 ## Requirements
 
-- Node.js (v14 or higher recommended)
+- Node.js (v20 or higher recommended)
 - npm
 
 ---

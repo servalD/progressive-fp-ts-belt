@@ -1,6 +1,7 @@
 import fs from "fs";
 import highlight from "cli-highlight";
 import chalk from 'chalk';
+import { A, pipe, S } from "@mobily/ts-belt";
 
 function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -27,15 +28,15 @@ const saveLastSection = () => {
 
 const dedentCode = (code: string): string => {
   // Remove leading/trailing empty lines
-  const trimmedLines = code.split("\n").filter(line => line.trim().length > 0);
+  
+  const trimmedLines = pipe(code, S.split('\n'), A.filter(line => line.trim().length > 0));
   // Calculate the minimum indentation
+  
   const minIndent = Math.min(
-    ...trimmedLines.map(line => line.match(/^(\s*)/)?.[1]?.length || 0)
+    ...pipe(trimmedLines, A.map(line => line.match(/^(\s*)/)?.[1]?.length || 0))
   );
   // Remove the minimum indentation from all lines
-  return trimmedLines
-    .map(line => line.slice(minIndent))
-    .join("\n");
+  return pipe(trimmedLines, A.map(S.slice(minIndent, -1)), A.join("\n"));
 };
 
 // Create a context for logging code (using closure method !!!)
